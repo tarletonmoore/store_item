@@ -8,27 +8,30 @@
 # p "The price for the #{item3[:color]} #{item3[:style]} is $#{item3[:price]}"
 
 class Item
+  attr_accessor :price
+  attr_reader :color, :style
+
   def initialize(color, price, style)
     @color = color
     @price = price
     @style = style
   end
 
-  def color
-    @color
-  end
+  # def color
+  #   @color
+  # end
 
-  def price
-    @price
-  end
+  # def price
+  #   @price
+  # end
 
-  def price=(new_price)
-    @price = new_price
-  end
+  # def price=(new_price)
+  #   @price = new_price
+  # end
 
-  def style
-    @style
-  end
+  # def style
+  #   @style
+  # end
 
   def info
     p "The price for the #{@color} #{@style} is #{@price}"
@@ -42,4 +45,5 @@ p item1.price
 item1.info
 
 item2 = Item.new("blue", 10, "jeans")
+p item2.color
 item3 = Item.new("tan", 50, "khakis")
