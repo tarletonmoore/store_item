@@ -11,10 +11,10 @@ class Item
   attr_accessor :price
   attr_reader :color, :style
 
-  def initialize(color, price, style)
-    @color = color
-    @price = price
-    @style = style
+  def initialize(options)
+    @color = options[:color]
+    @price = options[:price]
+    @style = options[:style]
   end
 
   # def color
@@ -34,16 +34,16 @@ class Item
   # end
 
   def info
-    p "The price for the #{color} #{style} is #{@rice}"
+    p "The price for the #{@color} #{@style} is #{@price}"
   end
 end
 
-item1 = Item.new("red", 20, "shorts")
+item1 = Item.new(color: "red", price: 20, style: "shorts")
 p item1.price
 item1.price = 30
 p item1.price
 item1.info
 
-item2 = Item.new("blue", 10, "jeans")
+item2 = Item.new(color: "blue", price: 10, style: "jeans")
 p item2.color
-item3 = Item.new("tan", 50, "khakis")
+item3 = Item.new(color: "tan", price: 50, style: "khakis")
