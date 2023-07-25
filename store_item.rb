@@ -34,7 +34,7 @@ class Item
   # end
 
   def info
-    p "The price for the #{@color} #{@style} is #{@price}"
+    p "The price for the #{color} #{style} is #{@rice}"
   end
 end
 
